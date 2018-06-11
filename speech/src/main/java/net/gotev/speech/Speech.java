@@ -503,7 +503,7 @@ public class Speech {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             final Bundle params = new Bundle();
-            params.putString(TextToSpeech.Engine.KEY_PARAM_STREAM, String.valueOf(mAudioStream));
+            params.putInt(TextToSpeech.Engine.KEY_PARAM_STREAM, mAudioStream);
             mTextToSpeech.speak(message, mTtsQueueMode, params, utteranceId);
         } else {
             final HashMap<String, String> params = new HashMap<>();
